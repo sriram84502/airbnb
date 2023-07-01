@@ -7,6 +7,9 @@ body{
     justify-content: space-between;
     border-bottom: 1px solid rgb(202, 202, 202);
     width: 100%;
+    background-color: #fff;
+    /* position: fixed; */
+    /* top: 10px; */
 }
 
 .searchicon {
@@ -99,8 +102,10 @@ body{
     padding: auto 20px;
     display: flex;
     justify-content: center;
+    flex-shrink: 0;
     flex-wrap: wrap;
     gap:50px;
+    flex-grow: inherit;
   }
   .card{
     width: 321px;
@@ -156,11 +161,13 @@ body{
     margin: 5px auto;
     display: flex;
     justify-content: center;
-    gap: 45px;
+    gap: 25px;
     text-align: center;
+    background-color: #fff;
 }
 .container p {
     margin: 0;
+    font-size: small;
     font-weight: 500;
 }
 .container svg {
@@ -200,6 +207,8 @@ body{
   border-radius: 30px;
   padding: 10px 15px;
   bottom: 15%;
+  border: none;
+  outline: none
 }
 
 .fixed-footer{
@@ -318,4 +327,16 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.parent-container {
+  position: sticky;
+  top: 70px;
+  z-index: 999;
+}
+
+.fixed-nav {
+position: sticky;
+top: 0;
+z-index: 999;
 }
